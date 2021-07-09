@@ -1,0 +1,49 @@
+<!DOCTYPE html SYSTEM "https://thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="pt">
+    <head>
+		<meta charset="utf-8">
+		<meta name="author" content="Hora Marcada">
+		<title>Cadastro consumidor</title>
+		<link rel="stylesheet" href="css/style2.css">
+		<link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
+		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+	</head>
+
+    <body>
+        <!--<header>
+                <div class="box">
+                    <div class="container-1">
+                        <span class="icon"><i class="fa fa-search"></i></span>
+                        <input type="search" id="search" placeholder="Search..." />
+                    </div>
+                </div>		
+        </header> -->
+        <div class="container" id="container">
+            <div class="form-container sign-up-container"></div>
+            <div class="form-container sign-in-container">
+                <form th:action="@{/consumidores}" th:method="post">
+                <h1>Cadastro do consumidor</h1>
+                    <input name="nome" type="text" placeholder="Nome" >
+                    <input name="email" type="email" placeholder="E-mail" />
+                    <input name="telefone" type="tel" placeholder="Telefone/Celular" />
+                    <input name="endereco" type="endereço" placeholder="Endereço" />
+                    <input name="senha" type="password" placeholder="Senha" />
+                    <input name="confsenha" type="password" placeholder="Confirmação de Senha" />
+                    <label id="termoco">Li e concordo com os Termos de Uso.</label>
+                    <input name="termos" type="checkbox" id="termo" checked/>
+                    <a href="cadastro_ps.html"><button class="cadastro_ps">Cadastrar-se como <br> prestador de serviço</button></a>
+                    <button type="submit" class="confirmar">Confirmar</button>
+                </form>
+            </div>
+            <div class="overlay-container">
+                <div class="overlay">
+                    <div class="cadastro overlay-panel overlay-right">
+                        <h2>Já possui <br> uma conta?</h2>
+                        <button class="ghost">Entrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

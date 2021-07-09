@@ -1,0 +1,56 @@
+<!DOCTYPE html SYSTEM "https://thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns:th="http://www.thymeleaf.org" lang="pt">
+    <head>
+		<meta charset="utf-8">
+		<meta name="author" content="Hora Marcada">
+		<title>Login</title>
+		<link rel="stylesheet" href="./CSS/style.css">
+		<link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
+		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+	</head>
+	
+	<body>
+		<!--<header>
+			<div class="box">
+				<div class="container-1">
+					<span class="icon"><i class="fa fa-search"></i></span>
+					<input type="search" id="search" placeholder="Search..." />
+				</div>
+			</div>		
+	    </header> -->
+		<div class="container" id="container">
+			<div class="form-container sign-up-container"></div>
+			<div class="form-container sign-in-container">
+				
+					<h1>Entrar com:</h1>
+					<div class="social-container">
+						<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+						<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+						<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+					</div>
+					<span>ou entre com seu e-mail</span>
+					<form th:action="@{/login}" method="post">
+					<input type="email" placeholder="Email" />
+					<input type="senha" placeholder="Senha" />
+					<a href="#">Esqueceu a senha?</a>
+					<input type="submit" value="Confirmar"/><button>Entrar</button>
+					</form>
+				<div th:="${param.error}">Senha ou Email inválidos.</div>
+			</div>
+			<div class="overlay-container">
+				<div class="overlay">
+					<div class="overlay-panel overlay-left">
+						<h1>Bem-vindo de volta!</h1>
+						<p>Para manter-se logado, por favor cadastre suas informações pessoais</p>
+						<button class="ghost" id="signIn">Entrar</button>
+					</div>
+					<div class="overlay-panel overlay-right">
+						<h1>Olá, é ótimo ter você aqui!</h1>
+						<p>Cadastre seus dados pessoais e comece sua jornada conosco!</p>
+						<button class="ghost" id="signUp">Cadastrar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

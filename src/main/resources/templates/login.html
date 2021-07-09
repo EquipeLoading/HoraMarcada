@@ -1,0 +1,23 @@
+<!DOCTYPE html SYSTEM "https://thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lista</title>
+</head>
+<body>
+    <h1>Lista</h1>
+
+<a href="/consumidorForm">Adicionar um novo consumidor</a><br>
+
+<div>
+    <form th:action="@{/login}" method="post">
+        <label>Email: <input type="email" name="username"/> </label>
+
+        <label>Senha: <input type="password" name="password"/> </label>
+
+        <input type="submit" value="Entrar"/>
+    </form>
+</div>
+</body>
+</html>
